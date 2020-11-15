@@ -1,0 +1,88 @@
+1) All the same:
+
+a= int(input())
+list= []
+while a:
+    s= int(input())
+    list.append(s)
+    a-=1
+    if a==0:
+        break
+b = all(list[i] == list[i+1] for i in range(len(list)-1))
+print(b)
+
+2)Counting Letters:
+
+
+from collections import Counter
+a=input()
+b=Counter(char.lower() for char in a if char.isalpha()).most_common(1)
+n=str(b)
+c=n[3]
+print(c)
+
+3)Longest repeat:
+
+import re
+a = input()
+def skr(a):
+   b = max(re.findall(r'((\w+?)\2+)', a), key=lambda t: len(t[0]))
+   return b[0]
+print(skr(a)[1])
+
+4) Simple primes:
+
+a = int(input())
+for i in range(1, a , 1):
+    if (i == 1 or i == 0): 
+        continue
+    skr = 1
+    for j in range(2, ((i // 2) + 1), 1):
+       if (i % j == 0):
+          skr = 0
+          break
+    if (skr == 1):
+        print(i)
+
+5) Calculate the volume:
+
+cube= [int(i) for i in input().split()]
+a=cube[0]
+b=cube[1]
+c=cube[2]
+res = a*b*c
+print(res)
+
+6) Remove vowels:
+
+skr= input()
+sym=str.maketrans("","","aAeEiIoOyYuU")
+skr=skr.translate(sym)
+print(skr)
+
+7)Woooow:
+ 
+n = int(input())
+skr = "Wow"
+print(str("W")+str("o")*n+str("w"))
+
+
+8)John or Betty:
+
+john,betty=map(int,input().split())
+if john>betty:
+    print("John")
+elif john<betty:
+    print("Betty")
+else:
+    print("NOBODY")
+
+9) Least Divisor:
+
+n = int(input())
+print(int(n/n))
+
+10)Greatest Divisor:
+
+n = int(input())
+print(int(n/1))
