@@ -1,0 +1,65 @@
+1)Sum of squares
+
+skr = [int(x) for x in input().split()]
+a = skr[0]
+b = skr[1]
+suma = 0
+while a <= b:
+    suma = suma + a*a
+    a +=1
+print(suma)
+
+2)Compare two numbers
+
+t=int(input())
+for i in range (t):
+    n,m=map(int,input().split())
+    if n>m:
+        print( n ,' is greater than ' ,m )
+    if n<m:
+        print( n ,' is smaller than ', m )
+    if n == m:
+        print('n is equal m: ', n )
+
+3)How many solutions? 1
+
+x,y,z=[int(x) for x in input().split()]
+res=0
+for a in range(x+1):
+    for b in range(x+1):
+        for c in range(x+1):
+            for d in range(x+1):
+                if y*a*a +z*b*b==y*c*c +z*d*d:
+                     res +=1
+print(res)
+
+
+4)Sum in a list 1
+
+s = input('')
+a = (list(map(int, s.split())))
+k = input('')
+b = (list(map(int, k.split())))
+summa = sum(a[b[0]:(b[1]+1)])
+print(summa)
+
+
+5)Sort
+
+a = int(input())
+num=[a]
+for i in num:
+           num =[int(x) for x in input().split()]
+           num.sort()
+           for j in num:
+                 print(j,end = ' ')
+
+6)find pattern
+
+a = input()
+b = input()
+skr = a.find(b)
+if skr > 0:
+    print("YES")
+if skr < 0:
+    print("NO")
